@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Spread.Connect.Domain\Spread.Connect.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

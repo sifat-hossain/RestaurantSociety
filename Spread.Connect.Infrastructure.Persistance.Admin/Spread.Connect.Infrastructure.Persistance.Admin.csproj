@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.16">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Spread.Connect.Application.Admin\Spread.Connect.Application.Admin.csproj" />
+    <ProjectReference Include="..\Spread.Connect.Application.Auth\Spread.Connect.Application.Auth.csproj" />
+    <ProjectReference Include="..\Spread.Connect.Domain.Framework\Spread.Connect.Domain.Framework.csproj" />
+    <ProjectReference Include="..\Spread.Connect.Domain\Spread.Connect.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

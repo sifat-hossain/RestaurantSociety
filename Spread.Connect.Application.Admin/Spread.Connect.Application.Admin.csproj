@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="3.7.106.1" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="FluentValidation" Version="11.5.2" />
+    <PackageReference Include="MailKit" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Spread.Connect.Domain.Admin\Spread.Connect.Domain.Admin.csproj" />
+    <ProjectReference Include="..\Spread.Connect.Domain.Framework\Spread.Connect.Domain.Framework.csproj" />
+    <ProjectReference Include="..\Spread.Connect.Domain\Spread.Connect.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
