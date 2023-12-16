@@ -43,13 +43,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spread.Connect.Domain.Broth
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spread.Connect.Infrastructure.Persistance.Brotherhood", "Spread.Connect.Infrastructure.Persistance.Brotherhood\Spread.Connect.Infrastructure.Persistance.Brotherhood.csproj", "{32CA64E1-C0D8-4111-AC2E-005ED0F803CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant.Society.Application.Digital.Menu", "Restaurant.Society.Application.Digital.Menu\Restaurant.Society.Application.Digital.Menu.csproj", "{35E02C0E-2CBD-4E8D-AEE8-BA7D83C3D773}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant.Society.Application.Digital.Menu", "Restaurant.Society.Application.Digital.Menu\Restaurant.Society.Application.Digital.Menu.csproj", "{35E02C0E-2CBD-4E8D-AEE8-BA7D83C3D773}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant.Society.Domain.Digital.Menu", "Restaurant.Society.Domain.Digital.Menu\Restaurant.Society.Domain.Digital.Menu.csproj", "{B5265AB0-A3F1-4E47-98C3-B92D1B1B4DA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant.Society.Domain.Digital.Menu", "Restaurant.Society.Domain.Digital.Menu\Restaurant.Society.Domain.Digital.Menu.csproj", "{B5265AB0-A3F1-4E47-98C3-B92D1B1B4DA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant.Society.Infrastructure.Persistance.Digital.Menu", "Restaurant.Society.Infrastructure.Persistance.Digital.Menu\Restaurant.Society.Infrastructure.Persistance.Digital.Menu.csproj", "{696A38B7-5856-436C-97BB-67155E816077}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant.Society.Api.Digital.Menu", "Restaurant.Society.Api.Digital.Menu\Restaurant.Society.Api.Digital.Menu.csproj", "{8DC12D07-C2E3-411B-955D-5B28713676FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant.Society.Api.Digital.Menu", "Restaurant.Society.Api.Digital.Menu\Restaurant.Society.Api.Digital.Menu.csproj", "{8DC12D07-C2E3-411B-955D-5B28713676FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant.Society.Infrastructure.Persistance.Digital.Menu", "Restaurant.Society.Infrastructure.Persistance.Digital.Menu\Restaurant.Society.Infrastructure.Persistance.Digital.Menu.csproj", "{B250BEFD-C917-4278-A8F2-5FBC0F0395EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,14 +129,14 @@ Global
 		{B5265AB0-A3F1-4E47-98C3-B92D1B1B4DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5265AB0-A3F1-4E47-98C3-B92D1B1B4DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5265AB0-A3F1-4E47-98C3-B92D1B1B4DA8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{696A38B7-5856-436C-97BB-67155E816077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{696A38B7-5856-436C-97BB-67155E816077}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{696A38B7-5856-436C-97BB-67155E816077}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{696A38B7-5856-436C-97BB-67155E816077}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8DC12D07-C2E3-411B-955D-5B28713676FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8DC12D07-C2E3-411B-955D-5B28713676FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DC12D07-C2E3-411B-955D-5B28713676FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DC12D07-C2E3-411B-955D-5B28713676FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B250BEFD-C917-4278-A8F2-5FBC0F0395EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B250BEFD-C917-4278-A8F2-5FBC0F0395EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B250BEFD-C917-4278-A8F2-5FBC0F0395EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B250BEFD-C917-4278-A8F2-5FBC0F0395EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,8 +160,8 @@ Global
 		{32CA64E1-C0D8-4111-AC2E-005ED0F803CE} = {22141BB9-8EB8-4899-819E-E1A8B8198167}
 		{35E02C0E-2CBD-4E8D-AEE8-BA7D83C3D773} = {7D0DE482-A838-42D0-BE71-B84D6A566EFC}
 		{B5265AB0-A3F1-4E47-98C3-B92D1B1B4DA8} = {863EBCAC-5F83-4432-8E9C-56230DDFFAD5}
-		{696A38B7-5856-436C-97BB-67155E816077} = {22141BB9-8EB8-4899-819E-E1A8B8198167}
 		{8DC12D07-C2E3-411B-955D-5B28713676FD} = {95DB3FA8-21FB-4D7A-BD7C-2DDBD63DEEDA}
+		{B250BEFD-C917-4278-A8F2-5FBC0F0395EF} = {22141BB9-8EB8-4899-819E-E1A8B8198167}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A74DBC0D-208F-42EC-9DA9-22D0145F659A}
