@@ -1,0 +1,52 @@
+﻿name: NF_$(BuildDefinitionName)_$(SourceBranchName)_0.0$(Rev:.r)
+variables:
+  configuration: release
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - development
+  paths:
+    include:
+    - Spread.Connect.Api.Notification
+    - Spread.Connect.Application.Notification
+    - Spread.Connect.Domain
+    - Spread.Connect.Domain.Framework
+    - Spread.Connect.Identity.Extensions
+    - Spread.Connect.Domain.Notification
+    - Spread.Connect.Infrastructure.Persistance.Notification  
+
+jobs:
+  - job: Windows
+
+    pool:
+      vmImage: windows-latest
+    
+    steps:
+      - task: DotNetCoreCLI@2
+        displayName: Restore
+        inputs:
+          command: restore
+          projects: "**/Spread.Connect.Api.Notification.csproj"
+      
+      - task: DotNetCoreCLI@2
+        displayName: Build
+        inputs:
+          projects: "**/Spread.Connect.Api.Notification.csproj"
+          arguments: "--configuration $(configuration)"
+
+      - task: DotNetCoreCLI@2
+        displayName: Publish
+        inputs:
+          command: publish
+          publishWebProjects: false
+          projects: "**/Spread.Connect.Api.Notification.csproj"
+          arguments: "--configuration $(configuration) --output $(build.artifactstagingdirectory)"
+          zipAfterPublish: true
+
+      - task: PublishBuildArtifacts@1
+        displayName: "Publish Artifact"
+        inputs:
+          PathtoPublish: "$(build.artifactstagingdirectory)"
+      

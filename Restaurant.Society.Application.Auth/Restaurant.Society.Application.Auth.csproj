@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Restaurant.Society.Domain.Admin\Restaurant.Society.Admin.csproj" />
+    <ProjectReference Include="..\Restaurant.Society.Domain.Framework\Restaurant.Society.Domain.Framework.csproj" />
+    <ProjectReference Include="..\Restaurant.Society.Domain\Restaurant.Society.Domain.Digital.Menu.csproj" />
+  </ItemGroup>
+
+</Project>

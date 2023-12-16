@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Spread.Connect.Application.Auth": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:4558;http://localhost:4567"
+    }
+  }
+}

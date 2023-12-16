@@ -1,0 +1,59 @@
+﻿name: BH_$(BuildDefinitionName)_$(SourceBranchName)_0.0$(Rev:.r)
+variables:
+  configuration: release
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - development
+  paths:
+    include:
+    - Spread.Connect.Api.Admin
+    - Spread.Connect.Application.Api.Auth
+    - Spread.Connect.Application.Api.Brotherhood
+    - Spread.Connect.Application.Api.Notification
+    - Spread.Connect.Domain.Persistence.Admin
+    - Spread.Connect.Domain
+    - Spread.Connect.Domain.Admin
+    - Spread.Connect.Domain.Brotherhood
+    - Spread.Connect.Domain.Framework
+    - Spread.Connect.Application.Admin
+    - Spread.Connect.Application.Auth
+    - Spread.Connect.Application.Brotherhood
+    - Spread.Connect.Application.Notification
+    - Spread.Connect.Identity.Extensions
+
+jobs:
+  - job: Windows
+
+    pool:
+      vmImage: windows-latest
+    
+    steps:
+      - task: DotNetCoreCLI@2
+        displayName: Restore
+        inputs:
+          command: restore
+          projects: "**/Spread.Connect.Api.Brotherhood.csproj"
+      
+      - task: DotNetCoreCLI@2
+        displayName: Build
+        inputs:
+          projects: "**/Spread.Connect.Api.Brotherhood.csproj"
+          arguments: "--configuration $(configuration)"
+
+      - task: DotNetCoreCLI@2
+        displayName: Publish
+        inputs:
+          command: publish
+          publishWebProjects: false
+          projects: "**/Spread.Connect.Api.Brotherhood.csproj"
+          arguments: "--configuration $(configuration) --output $(build.artifactstagingdirectory)"
+          zipAfterPublish: true
+
+      - task: PublishBuildArtifacts@1
+        displayName: "Publish Artifact"
+        inputs:
+          PathtoPublish: "$(build.artifactstagingdirectory)"
+      
